@@ -1,4 +1,4 @@
-
+/* En este root almaceno exactamente todos los colores que uso, así no tengo que llamarlos uno por uno mediante el código hexadecimal. */
 :root {
   --verde: #b7cf7e;
   --verde-suave: #c3d68f;
@@ -11,15 +11,16 @@
   --texto: #1a1a1a;
   --sombra: rgba(0, 0, 0, 0.12);
 }
-
+/* Tamaño estándar de la caja principal de texto de todas las páginas. */
 * {
   box-sizing: border-box;
 }
-
+/* Para que se deslice suavecito, no es importante, es más por gusto. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Específicaciones del body de cada página, todas tienen la misma fuente. */
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -38,7 +39,7 @@ a {
   color: inherit;
 }
 
-
+/* Esta es la barra de navegación horizontal, uso un justify para hacerla horizontal y un grid para hacer su separación pero que aún asi estén centradas. */
 .navbar {
   background: var(--verde);
   display: flex;
@@ -48,7 +49,7 @@ a {
   gap: 14px;
   padding: 16px 40px;
 }
-
+/* Lamentablemente el rosa, que le puse rosa pq es rosa, es usado como café en la página, porque se ve café LOL */
 .nav-btn {
   background: var(--rosa);
   color: var(--negro);
@@ -62,6 +63,7 @@ a {
   white-space: nowrap;
 }
 
+/* Aquí solo es el hoover de cada botón del navbar, cuando se presiona sube un poquito, por eso el -1px de la posición Y, sube un píxel. */
 .nav-btn:hover,
 .nav-btn:focus-visible {
   background: var(--rosa-hover);
@@ -83,7 +85,7 @@ a {
 }
 
 
-
+/* Hero es el banner de la página principal, la photo es donde se almacena la imagen redondita del index. */
 .hero {
   position: relative;
   padding: 44px 40px 90px;
@@ -114,6 +116,7 @@ a {
   object-fit: cover;
 }
 
+/* Es el recuadro de texto donde viene el titulo y la descripción del mes. */
 .intro-band {
   background: var(--verde);
   padding: 90px 60px 40px;
@@ -126,6 +129,7 @@ a {
   font-size: 1.05rem;
 }
 
+/*Son las específicaciones de cada una de las cartas (divs) que se usan dentro de las páginas. */
 .card-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -162,7 +166,7 @@ a {
   font-size: 1.05rem;
 }
 
-
+/* Modelos de título de todas las páginas. */
 
 .page-title {
   font-size: 2.1rem;
@@ -178,7 +182,7 @@ a {
   margin: 30px 40px;
 }
 
-
+/* Es donde se acomodan todos los recuadros minis de la página de fechas, como son mucho más pequeños que los normales y tienen que ser de colores intercalados, hice una clase aparte. */
 
 .fecha-row {
   display: grid;
@@ -192,6 +196,7 @@ a {
   background: var(--verde);
 }
 
+/* Esto es el texto que va dentro de los recuadros de fecha. */
 .fecha-date {
   background: var(--coral);
   color: var(--negro);
@@ -205,6 +210,7 @@ a {
   font-size: 1.05rem;
 }
 
+/* Aquí alterna el color del fondo según la columna donde se encuentra. */
 .fecha-row.alt .fecha-date {
   background: var(--blanco);
   order: 3;
@@ -239,6 +245,7 @@ a {
   font-weight: 700;
 }
 
+/* Estos son los recuadros donde van los datos curiosos y las imagenes. Se dividen en filas, van 3 datos arriba y 2 debajo. */
 .datos-band {
   background: var(--verde);
   padding: 50px 60px;
@@ -272,6 +279,8 @@ a {
   font-size: 1.05rem;
 }
 
+
+/* Este es el punto donde se encuentran los diseños que las photocards de los personajes, son como fotos tipo polaroid que se ajustan al tamaño de la imagen. */
 
 .personajes-band {
   background: var(--verde);
@@ -314,6 +323,7 @@ a {
   font-weight: 700;
 }
 
+/* Este es el diseño polaroid, son fotos con fondo blanco ajustable, y una mini sombra, que no se ve tanto. Se pueden ajustar los object-fit para que la imagen quede de otra manera, con el cover, la imagen busca curbrir la mayoría de la superficie blanca. */
 .polaroid {
   background: var(--blanco);
   padding: 10px 10px 26px;
